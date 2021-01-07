@@ -56,3 +56,5 @@ sysinfo.txt
 
 # Logs
 /Logs/
+.idea/.idea.colyseus-unity3d/.idea
+Server/.idea
