@@ -57,6 +57,7 @@ export class ArrayTestRoom extends Room<CardGameState> {
       let player = playerObject[1];
       for (let card of this.deck) {
         player.cardsInHand.push(card.clone());
+        player.cardsInHandMap.set(card.key(), card.clone());
       }
     }
   }
@@ -69,8 +70,10 @@ export class ArrayTestRoom extends Room<CardGameState> {
   updateCardsInField(cardsToPlay: Card[]) {
     this.field.push(cardsToPlay);
     this.state.cardsInField.clear();
+    this.state.cardsInFieldMap.clear()
     for (let card of cardsToPlay) {
       this.state.cardsInField.push(card.clone());
+      this.state.cardsInFieldMap.set(card.key(), card.clone());
     }
   }
 

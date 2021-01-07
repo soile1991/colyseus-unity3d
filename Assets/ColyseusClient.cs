@@ -28,7 +28,9 @@ public class ColyseusClient : MonoBehaviour {
 	public Text m_IdText,
 		m_SessionIdText,
 		m_cardsInHandText,
-		m_cardsInFieldText;
+		m_cardsInFieldText,
+		m_cardsInHandMapText,
+		m_cardsInFieldMapText;
 
 	private string roomName = "arrayTest";
 
@@ -95,5 +97,7 @@ public class ColyseusClient : MonoBehaviour {
 	void OnStateChangeHandler(CardGameState state, bool isFirstState) {
 		m_cardsInHandText.text = "Cards In hand count:" + this.myPlayer.cardsInHand.Count;
 		m_cardsInFieldText.text = "Field Card count:" + state.cardsInField.Count;
+		m_cardsInHandMapText.text = "Cards In hand Map count:" + this.myPlayer.cardsInHandMap.Count;
+		m_cardsInFieldMapText.text = "Field Card Map count:" + state.cardsInFieldMap.Count;
 	}
 }

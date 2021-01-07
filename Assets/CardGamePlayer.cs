@@ -13,5 +13,8 @@ public partial class CardGamePlayer : Schema {
 
 	[Type(1, "array", typeof(ArraySchema<Card>))]
 	public ArraySchema<Card> cardsInHand = new ArraySchema<Card>();
+
+	[Type(2, "map", typeof(MapSchema<Card>))]
+	public MapSchema<Card> cardsInHandMap = new MapSchema<Card>();
 }
 
